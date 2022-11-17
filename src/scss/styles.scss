@@ -2,6 +2,30 @@
 @import "mixin.scss";
 @import "reset.scss";
 
+.burger-menu {
+   padding: 40px 0px;
+   width: 100%;
+   background-color: #D1A954;
+
+   &__inner {
+      max-width: 830px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      justify-content: center;
+   }
+
+   &__nav-list {}
+
+   &__nav-list-item {}
+
+   &__nav-item-link {}
+
+   &__nav-item-link--js-active {}
+}
+
+
 .wrapper-content {
    width: 100%;
 
@@ -13,8 +37,9 @@
    padding: 60px 0px 30px 0px;
 
    &__inner {
-      max-width: 1400px;
+      max-width: 1430px;
       width: 100%;
+      padding: 0 15px;
       margin: 0 auto;
       display: flex;
       align-items: center;

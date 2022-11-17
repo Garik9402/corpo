@@ -3,9 +3,11 @@
 @import "reset.scss";
 
 .burger-menu {
-   padding: 40px 0px;
+   position: absolute;
+   padding: 200px 0px 50px 0px;
    width: 100%;
    background-color: #D1A954;
+
 
    &__inner {
       max-width: 830px;
@@ -16,11 +18,25 @@
       justify-content: center;
    }
 
-   &__nav-list {}
+   &__nav-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
 
-   &__nav-list-item {}
+   &__nav-list-item {
+      margin: 40px;
+   }
 
-   &__nav-item-link {}
+   &__nav-item-link {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 16px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #000000;
+   }
 
    &__nav-item-link--js-active {}
 }
@@ -32,9 +48,11 @@
 }
 
 .header {
+   position: relative;
    width: 100%;
    background-color: #fff;
    padding: 60px 0px 30px 0px;
+   z-index: 10;
 
    &__inner {
       max-width: 1430px;
@@ -96,6 +114,17 @@
    position: relative;
    width: 40px;
    height: 20px;
+
+   &--js-open &::before {
+      left: 10px;
+      top: 50%;
+      transform: rotate(180deg);
+   }
+
+   &--js-open &::after {
+      bottom: 50%;
+      transform: rotate(-180deg);
+   }
 
    &:before,
    &:after {
